@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head> 
+    <title>Hangman - Linn Assigment 3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles/hangman.css">
+    <script src="./js/jquery-3.6.2.min.js"></script>
+    <script src="js/hangman.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Hangman</h1>
+        <h3>Christmas edition</h3>
+    </header>
+
+    <main>
+        <button class="give-up">GIVE UP</button>
+
+        <div class="img"></div>
+
+        <section>
+            <p class="word"></p>
+            <p class="feedback"></p>
+        </section>
+
+        <div class="btn-container">
+            <button class="play-btn">Start</button>
+        </div>
+
+        <div class="input-container">
+            <input type="input" id="playerInput" class="playerInput" placeholder="GUESS">
+            <button type="button" id="tryLetter" class="tryLetter">TRY</button>
+        </div>
+    </main>
+    
+    <footer>
+        <h2>Copyright  &#169; 2022 Linn Johannson</h2>
+    </footer>
+</body>   
+</html>
