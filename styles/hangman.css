@@ -76,6 +76,7 @@ main {
     border-radius: var(--small-btn-border-radius);
     border: none;
     cursor: pointer;
+    color: var(--secondary-color);
     display: none;
     font-size: var(--small-font-size);
     font-weight: var(--bold-font-weight);
@@ -97,6 +98,7 @@ main {
     align-items: center;
     background-color: var(--primary-color);
     border-radius: 15px;
+    border: solid 2px var(--secondary-color);
     color: var(--secondary-color);
     cursor: pointer;
     display: flex;
@@ -146,6 +148,7 @@ input::placeholder{
 
 .tryLetter{
     cursor: pointer;
+    color: var(--secondary-color);
     background-color: var(--fourth-color);
     border: none;
 }
