@@ -11,12 +11,21 @@
 
 <body>
     <header>
-        <h1>Hangman</h1>
-        <h3>Christmas edition</h3>
+        <div>
+            <h1>Hangman</h1>
+            <h3>Christmas edition</h3>
+        </div>
     </header>
 
     <main>
-        <button class="give-up">GIVE UP</button>
+        <div class="counter-container">
+            <div class="counter">
+                <p class="played-times"></p>
+                <p class="won-times"></p>
+                <p class="lost-times"></p>
+                
+            </div>
+        </div>
 
         <div class="img"></div>
 
@@ -33,6 +42,9 @@
             <input type="input" id="playerInput" class="playerInput" placeholder="GUESS">
             <button type="button" id="tryLetter" class="tryLetter">TRY</button>
         </div>
+
+        <button class="give-up">GIVE UP</button>
+
     </main>
     
     <footer>

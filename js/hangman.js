@@ -26,16 +26,21 @@ $(function () {
     let gussesLeft;
     let numberPattern;
     let endAlert;
+    let playedTimes = 0;
+    let wonTimes = 0;
+    let lostTimes = 0;
 
     function play() { 
         defautltvalue();
         $(".btn-container").hide();
         $(".give-up").addClass("active");
+        $(".counter-container").addClass("active");
         $(".input-container").addClass("active");
         $(".img").addClass("active");
         $(".word").removeClass("winn").removeClass("lost").removeClass("hide").addClass("active");
         displayWord();
         displayFeedback();
+        playedTimes++;
     }
    
     function defautltvalue() {
@@ -46,6 +51,9 @@ $(function () {
         gussesLeft = 10;
         numberPattern = /^[0-9]$/;
         endAlert = " Press the Start-button to play again";
+        $(".played-times").text("Games: " + playedTimes)
+        $(".won-times").text("Won: " + wonTimes)
+        $(".lost-times").text("Lost: " + lostTimes)
         $(".img").css('background-image', 'url(resource/img/Hangman_img_0.png)');
     }
 
@@ -92,6 +100,7 @@ $(function () {
 
     function resetElement() {
         $(".give-up").removeClass("active");
+        $(".counter-container").removeClass("active");
         $(".input-container").removeClass("active");
         $(".btn-container").show();
     
@@ -99,13 +108,16 @@ $(function () {
             $(".img").removeClass("active");
             $(".word").addClass("winn");
             $(".feedback").text("Congrats! You have won!" + endAlert);
+            wonTimes++;
         } else if (hasLost()) {
             $(".word").addClass("lost");
-            $(".feedback").text("You lost! The correct word was " + chosenWord.toUpperCase() + endAlert);    
+            $(".feedback").text("You lost! The correct word was " + chosenWord.toUpperCase() + endAlert);   
+            lostTimes++;
         } else {
             $(".img").removeClass("active");
             $(".word").addClass("hide").removeClass("active");
             $(".feedback").text("Give up? " + endAlert);
+            lostTimes++;
         }
     }
 

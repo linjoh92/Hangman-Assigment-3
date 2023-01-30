@@ -3,6 +3,7 @@
     --secondary-color :#000000;
     --third-color: #4caf50;  
     --fourth-color: #cdcdcd;  
+    --light-grey: #efefef;
     --small-font-size: 0.8rem;
     --bold-font-weight: 600;
     --small-btn-border-radius: 4px;
@@ -73,15 +74,17 @@ main {
 }
 
 .give-up{
+    background-color: var(--light-grey);
     border-radius: var(--small-btn-border-radius);
     border: none;
-    cursor: pointer;
     color: var(--secondary-color);
+    cursor: pointer;
     display: none;
     font-size: var(--small-font-size);
     font-weight: var(--bold-font-weight);
+    height: fit-content;
     letter-spacing: 0.2rem;
-    margin-bottom: 50px;
+    margin-top: 50px;
     padding: 10px 25px;
     text-align: center;
 }
@@ -178,10 +181,6 @@ input::placeholder{
     display: none;
 }
 
-.active {
-    display: block;
-}
-
 .winn {
     color: var(--third-color);
     font-weight: var(--bold-font-weight);
@@ -192,10 +191,53 @@ input::placeholder{
     font-weight: var(--bold-font-weight);
 }
 
+.counter {
+    background-color: var(--light-grey);
+    border-radius: var(--small-btn-border-radius);
+    border: none;
+    color: var(--secondary-color);
+    height: fit-content;
+    font-size: var(--small-font-size);
+    font-weight: var(--bold-font-weight);
+    letter-spacing: 0.2rem;
+    padding: 10px 25px;
+    width: fit-content;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 4%;
+}
+
+.counter-container{
+    display: flex;
+    display: none;
+    justify-content: flex-end;
+    width: 100%;
+    position: absolute;
+    top: 110px;
+    padding: 20px;
+}
+
+.active {
+    display: block;
+}
+
 @media screen and (max-width: 570px) {
     .img{
         height: 400px;
         width: 320px;
+    }
+
+    main{
+        padding: 20px;
+    }
+
+    .counter{
+        padding: 0 30px;
+        margin: 0;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
     }
     
 }
